@@ -10,3 +10,4 @@ compiler:
 
 before_script: ar --version
 script: make re && make test
+after_script: otool -hv -arch all ./libhashtable.a
