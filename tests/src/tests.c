@@ -5,12 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlagneau <jlagneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/30 15:26:15 by jlagneau          #+#    #+#             */
-/*   Updated: 2015/11/30 15:26:31 by jlagneau         ###   ########.fr       */
+/*   Created: 2016/01/01 16:53:06 by jlagneau          #+#    #+#             */
+/*   Updated: 2016/01/01 16:53:06 by jlagneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		main(void)
+#include "tests.h"
+
+char			*all_tests(void)
 {
-	return (0);
+	TEST_ADD(static_string);
+	TEST_ADD(malloc_string);
+	return (NULL);
 }

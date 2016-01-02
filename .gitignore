@@ -1,4 +1,4 @@
 .obj/
 .dep/
-libhash
-debug
+libhash.a
+libhash_debug.a
