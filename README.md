@@ -24,8 +24,8 @@
     {
         t_hashtable *h;
 
-        ht_create(&delete);
-        ht_set("randomKey1", "Content");
+        h = ht_create(&delete);
+        ht_set(h, "randomKey1", "Content");
         printf("%s\n", ht_get(h, "randomKey1"));
         ht_delete(&h);
         return (0);
