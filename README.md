@@ -2,9 +2,9 @@
 
 ![](https://travis-ci.org/jlagneau/libhashtable.svg)
 
----
+This is a really simple hashtable library in C.
 
-This is a really simple hash library in C.
+---
 
 ## Installation
 
