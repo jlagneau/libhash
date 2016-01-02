@@ -2,3 +2,7 @@
 .dep/
 libhash.a
 libhash_debug.a
+tests/.obj/
+tests/.dep/
+tests/test
+tests/debug
