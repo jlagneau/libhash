@@ -4,9 +4,13 @@
 
 ---
 
+This is a really simple hash library in C.
+
 ## Installation
 
     make && make test
+
+There's no make install. Copy the file manually if you need to.
 
 ## Simple use case
 
@@ -30,3 +34,5 @@
         ht_delete(&h);
         return (0);
     }
+
+For more advanced use cases, read the tests or source code.
