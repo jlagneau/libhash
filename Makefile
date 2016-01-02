@@ -11,8 +11,8 @@
 #******************************************************************************#
 
 # Variables
-NAME      = libhash.a
-DEB_NAME  = libhash_debug.a
+NAME      = libhashtable.a
+DEB_NAME  = libhashtable_debug.a
 
 # Libraries
 FT_PATH   = libft/

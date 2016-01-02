@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "tests.h"
+#include "test.h"
 
 static void			malloc_string_delete(void *e)
 {

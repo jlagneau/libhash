@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libhash.h>
+#include <libhashtable.h>
 
 /*
 ** Set a value for a key in the hashtable.

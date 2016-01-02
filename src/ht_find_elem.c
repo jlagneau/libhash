@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libhash.h>
+#include <libhashtable.h>
 
 t_hashtable_elem	*ht_find_elem(t_hashtable *ht, char *key)
 {

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libhash.h>
+#include <libhashtable.h>
 
 /*
 ** Create a hashtable.

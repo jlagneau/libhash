@@ -13,7 +13,7 @@
 #ifndef TESTS_H
 # define TESTS_H
 # include <libft.h>
-# include <libhash.h>
+# include <libhashtable.h>
 # include <stdio.h>
 
 # define TEST_ASSERT(m,t)	if(1){nb_asserts++;if(!(t))return m;}

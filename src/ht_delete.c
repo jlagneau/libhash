@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libhash.h>
+#include <libhashtable.h>
 
 static t_hash_delete		set_func(t_hash_delete del)
 {

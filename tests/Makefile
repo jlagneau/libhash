@@ -64,12 +64,12 @@ DEB_DEPS  = $(addprefix $(DEPS_PATH), $(notdir $(DEB_OBJS:.o=.d)))
 
 # Rules
 $(NAME): CFLAGS += -O3
-$(NAME): LDLIBS += -lft -lhash
+$(NAME): LDLIBS += -lft -lhashtable
 $(NAME): $(OBJS)
 	$(CC) $^ $(LDFLAGS) $(LDLIBS) -o $@
 
 debug: CFLAGS += -g3
-debug: LDLIBS += -lft_debug -lhash_debug
+debug: LDLIBS += -lft_debug -lhashtable_debug
 debug: $(DEB_OBJS)
 	$(CC) $^ $(LDFLAGS) $(LDLIBS) -o $@
 

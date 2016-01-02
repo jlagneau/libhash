@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libhash.h>
+#include <libhashtable.h>
 
 /*
 ** Get value from hashtable for a given key.
