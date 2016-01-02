@@ -1,7 +1,7 @@
 .obj/
 .dep/
-libhash.a
-libhash_debug.a
+libhashtable.a
+libhashtable_debug.a
 tests/.obj/
 tests/.dep/
 tests/test
