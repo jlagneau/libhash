@@ -1,6 +1,6 @@
-# libhash
+# libhashtable
 
-![](https://travis-ci.org/jlagneau/libhash.svg)
+![](https://travis-ci.org/jlagneau/libhashtable.svg)
 
 ---
 
@@ -14,7 +14,7 @@ There's no make install. Copy the file manually if you need to.
 
 ## Simple use case
 
-    #include <libhash.h>
+    #include <libhashtable.h>
 
     /*
     ** Create a function to delete your table content.
