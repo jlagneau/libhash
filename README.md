@@ -1,5 +1,9 @@
 # libhash
 
+![](https://travis-ci.org/jlagneau/libhash.svg)
+
+---
+
 ## Installation
 
     make && make test
