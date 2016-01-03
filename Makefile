@@ -54,7 +54,7 @@ $(NAME): CFLAGS += -O3 -DLIBHASH_INTERNAL
 $(NAME): $(OBJS)
 	@-git submodule update --init --recursive
 	@make -C $(FT_PATH)
-ifeq ($(UNAME_S), DARWIN)
+ifeq ($(UNAME_S), Darwin)
 	libtool -static $@ $(FT_PATH)libft.a $^
 else
 	$(AR) $(ARFLAGS) $@ $(FT_PATH)libft.a $^
