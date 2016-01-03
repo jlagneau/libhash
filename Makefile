@@ -35,6 +35,9 @@ CPPFLAGS  = -I$(HEAD_PATH) -I$(FT_PATH)include
 DEPSFLAGS = -MMD -MF"$(DEPS_PATH)$(notdir $(@:.o=.d))"
 ARFLAGS   = rcsT
 
+# OS
+UNAME_S  := $(shell uname -s)
+
 # Files
 SRCS     := $(shell find src -type f)
 DEPS      = $(addprefix $(DEPS_PATH), $(notdir $(SRCS:.c=.d)))
@@ -51,14 +54,22 @@ $(NAME): CFLAGS += -O3 -DLIBHASH_INTERNAL
 $(NAME): $(OBJS)
 	@-git submodule update --init --recursive
 	@make -C $(FT_PATH)
+ifeq ($(UNAME_S), DARWIN)
+	libtool -static $@ $(FT_PATH)libft.a $^
+else
 	$(AR) $(ARFLAGS) $@ $(FT_PATH)libft.a $^
+endif
 	ranlib $@
 
 $(DEB_NAME): CFLAGS += -g3 -DLIBHASH_INTERNAL
 $(DEB_NAME): $(DEB_OBJS)
 	@-git submodule update --init --recursive
 	@make -C $(FT_PATH) debug
-	$(AR) $(ARFLAGS) $@ $(FT_PATH)libft_debug.a $^
+ifeq ($(UNAME_S), DARWIN)
+	libtool -static $@ $(FT_PATH)libft.a $^
+else
+	$(AR) $(ARFLAGS) $@ $(FT_PATH)libft.a $^
+endif
 	ranlib $@
 
 $(OBJS_PATH)%.o: $(SRCS_PATH)%.c
