@@ -31,7 +31,7 @@ FT_PATH  = ../libft/
 FT_INC   = $(FT_PATH)include/
 
 PRJ_PATH = ../
-PRJ_INC  = ../include
+PRJ_INC  = ../include/
 
 SRCS_PATH = src/
 HEAD_PATH = include/
