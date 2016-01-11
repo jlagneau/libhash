@@ -25,7 +25,6 @@ OBJS_PATH = .obj/
 DEPS_PATH = .dep/
 
 # Exec
-CC        = gcc
 AR        = ar
 RM        = rm -rf
 

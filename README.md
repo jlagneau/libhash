@@ -1,6 +1,6 @@
 # libhashtable
 
-![](https://travis-ci.org/jlagneau/libhashtable.svg)
+[![travis build icon](https://travis-ci.org/jlagneau/libhashtable.svg)](https://travis-ci.org/jlagneau/libhashtable)
 
 This is a really simple hashtable library in C.
 

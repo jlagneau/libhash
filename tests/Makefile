@@ -40,7 +40,6 @@ OBJS_PATH = .obj/
 DEPS_PATH = .dep/
 
 # Exec
-CC        = gcc
 RM        = rm -rf
 
 # Flags
