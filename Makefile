@@ -6,7 +6,7 @@
 #    By: jlagneau <jlagneau@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/21 08:29:58 by jlagneau          #+#    #+#              #
-#    Updated: 2016/01/11 13:29:57 by jlagneau         ###   ########.fr        #
+#    Updated: 2016/01/11 13:30:44 by jlagneau         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -46,7 +46,7 @@ DEB_OBJS  = $(OBJS:.o=_debug.o)
 DEB_DEPS  = $(addprefix $(DEPS_PATH), $(notdir $(DEB_OBJS:.o=.d)))
 
 # Phony
-.PHONY: all clean fclean norme re redebug
+.PHONY: all clean fclean norme re redebug test
 
 # Rules
 $(NAME): CFLAGS += -O3
