@@ -64,7 +64,7 @@ $(DEB_NAME): CFLAGS += -g3 -DLIBHASH_INTERNAL
 $(DEB_NAME): $(DEB_OBJS)
 	@-git submodule update --init --recursive
 	@make -C $(FT_PATH) debug
-ifeq ($(UNAME_S), DARWIN)
+ifeq ($(UNAME_S), Darwin)
 	libtool -static $@ $(FT_PATH)libft.a $^
 else
 	$(AR) $(ARFLAGS) $@ $(FT_PATH)libft.a $^
