@@ -6,7 +6,7 @@
 #    By: jlagneau <jlagneau@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/21 08:29:58 by jlagneau          #+#    #+#              #
-#    Updated: 2015/12/02 10:30:47 by jlagneau         ###   ########.fr        #
+#    Updated: 2016/01/11 13:29:57 by jlagneau         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -29,7 +29,7 @@ AR        = ar
 RM        = rm -rf
 
 # Flags
-CFLAGS    = -Wall -Wextra -Werror -pedantic
+CFLAGS    = -Wall -Wextra -Werror -pedantic -DLIBHASH_INTERNAL
 CPPFLAGS  = -I$(HEAD_PATH) -I$(FT_PATH)include
 DEPSFLAGS = -MMD -MF"$(DEPS_PATH)$(notdir $(@:.o=.d))"
 ARFLAGS   = rcsT
@@ -49,7 +49,7 @@ DEB_DEPS  = $(addprefix $(DEPS_PATH), $(notdir $(DEB_OBJS:.o=.d)))
 .PHONY: all clean fclean norme re redebug
 
 # Rules
-$(NAME): CFLAGS += -O3 -DLIBHASH_INTERNAL
+$(NAME): CFLAGS += -O3
 $(NAME): $(OBJS)
 	@-git submodule update --init --recursive
 	@make -C $(FT_PATH)
@@ -60,7 +60,7 @@ else
 endif
 	ranlib $@
 
-$(DEB_NAME): CFLAGS += -g3 -DLIBHASH_INTERNAL
+$(DEB_NAME): CFLAGS += -g3
 $(DEB_NAME): $(DEB_OBJS)
 	@-git submodule update --init --recursive
 	@make -C $(FT_PATH) debug
